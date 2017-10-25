@@ -18,6 +18,10 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 // app.use(indexRouter)
 
+app.get('/', (req,res)=>{
+  res.sendFile(path.resolve('src/client/index.html'))
+})
+
 app.listen(3023, function () {
   console.log('Listening on port 3023')
 })
